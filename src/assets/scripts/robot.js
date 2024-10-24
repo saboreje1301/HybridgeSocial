@@ -9,7 +9,7 @@ export function initScene(containerId) {
     
     // Inicialización de cámara, escena, luces
     const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(60, container.clientWidth / container.clientHeight, 0.4, 100);
+    const camera = new THREE.PerspectiveCamera(50, container.clientWidth / container.clientHeight, 0.4, 100);
     camera.position.set(-1, 2, 7);
     camera.lookAt(0, 1, 2);
 

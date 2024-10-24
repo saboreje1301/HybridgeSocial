@@ -4,12 +4,12 @@
 
 
     <!-- Form Section -->
-    <div class="d-flex align-items-center"
-      style="height: 100vh; background-image: url('your-image.jpg'); background-size: cover;">
+    <div class="d-flex align-items-center bg-cover"
+    style="height: 100vh; background-size: cover;">
       <div class="row m-3">
 
 
-        <div class="col-md-8 d-flex bg-dark text-white">
+        <div class="col-md-8 d-flex bg-dark-ct text-white">
           <div class="col-md-8 pt-3">
             <div class="container">
               <img src="../assets/Logo_blancofull.png" alt="" class="img-fluid">
@@ -25,34 +25,36 @@
         </div>
 
         <div class="col-md-4 text-white">
-          <div class="card bg-dark text-white">
+          <div class="card bg-dark-ct text-white h-100">
             <div class="card-body">
               <h5 class="card-title">Ingresar</h5>
               <form @submit.prevent="submitForm">
 
                 <!-- Campo de email -->
-                <div class="form-group">
+                <div class="form-group pt-2">
                   <label for="email">Email</label>
                   <input type="email" class="form-control radio-wrap" id="email" v-model="email" required
                     placeholder="ejemplo@micorreo.com">
                 </div>
 
                 <!-- Campo de contraseña con icono dentro del input -->
-                <div class="form-group">
+                <div class="form-group pt-2">
                   <label for="password">Contraseña</label>
                   <div class="input-group" style="width: 100%; border-radius: 9px;">
                     <input :type="isPasswordVisible ? 'text' : 'password'" class="form-control" id="password"
                       v-model="password" required placeholder="contraseña" style="border-radius: 9px">
                     <!-- Botón con el ícono dentro del input -->
+                     
                     <button type="button" @click="togglePasswordVisibility"
                       style="background: none; border: none; display: none;">
                       <i :class="isPasswordVisible ? 'fa fa-eye-slash' : 'fa fa-eye'" style="color: white;"></i>
                     </button>
+                  
                   </div>
                 </div>
 
                 <!-- Botón para enviar el formulario -->
-                <div class="p-2">
+                <div class="pt-4">
                   <button type="submit" class="btn"
                     :class="{ 'btn-primary': isFormValid, 'btn-secondary': !isFormValid }" :disabled="!isFormValid">
                     Entrar
@@ -61,7 +63,7 @@
               </form>
 
               <!-- Enlace para olvidé mi contraseña -->
-              <div><a href="#" class="card-link">¿Olvidé mi contraseña?</a></div>
+              <div class="pt-3"><a href="#" class="card-link">¿Olvidé mi contraseña?</a></div>
               <router-link to="/registro" class="card-link">¿No tienes una cuenta? Regístrate</router-link>
             </div>
           </div>
@@ -155,5 +157,15 @@ export default {
 .btn-secondary {
   background-color: grey;
   border-color: grey;
+}
+
+.bg-cover {
+    background-size: cover;
+    background-position: center;
+    background-image: url('../assets/bg-vrsocial.png');
+}
+
+.bg-dark-ct{
+  background-color: rgba(19, 17, 17, 0.603);
 }
 </style>

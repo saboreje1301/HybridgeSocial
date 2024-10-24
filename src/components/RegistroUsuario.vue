@@ -3,11 +3,11 @@
       <!-- Robot Animation Section -->
   
       <!-- Form Section -->
-      <div class="d-flex align-items-center bg-light"
-        style="height: 100vh; background-image: url('your-image.jpg'); background-size: cover;">
+      <div class="d-flex align-items-center bg-cover"
+        style="height: 100vh; background-size: cover;">
         <div class="row m-3">
   
-          <div class="col-md-8 d-flex bg-dark text-white">
+          <div class="col-md-8 d-flex bg-dark-ct text-white">
             <div class="col-md-8 pt-3">
               <div class="container">
                 <img src="../assets/Logo_blancofull.png" alt="" class="img-fluid">
@@ -22,7 +22,7 @@
           </div>
   
           <div class="col-md-4 text-white">
-            <div class="card bg-dark text-white">
+            <div class="card bg-dark-ct text-white">
               <div class="card-body">
                 <h5 class="card-title">Crear Cuenta</h5>
                 <form @submit.prevent="submitForm">
@@ -165,7 +165,6 @@
   .three-container {
     width: 100%;
     height: 400px;
-    background-color: rgba(100, 100, 100, 0.4);
   }
   
   .input-group {
@@ -176,4 +175,30 @@
     background-color: grey;
     border-color: grey;
   }
+
+  #robot-animation {
+  display: flex;            
+  justify-content: center;  
+  align-items: center;      
+  width: 100%;              
+  height: 100%;             
+  position: relative;       
+}
+
+canvas {
+  display: block;    
+  max-width: 100%;   
+  height: auto;     
+}
+
+.bg-cover {
+    background-size: cover;
+    background-position: center;
+    background-image: url('../assets/bg-vrsocial.png');
+}
+
+.bg-dark-ct{
+  background-color: rgba(19, 17, 17, 0.603);
+}
+
   </style>
